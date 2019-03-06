@@ -33,3 +33,21 @@ let articles = document.querySelectorAll(".article");
 articles.forEach(function(article) {
   return new Article(article);
 });
+
+TweenMax.to(".menu-button", 1.5, {
+  backgroundColor: "#448c6d",
+  x: 0,
+  rotation: 180
+});
+
+TweenMax.staggerFrom(
+  ".article",
+  1.5,
+  { opacity: 0, top: "100px", ease: Bounce.easeOut, scale: 1.1 },
+  0.4
+);
+
+TweenMax.staggerFrom(".lambda-school", 1.5, {
+  backgroundColor: "#448c6d",
+  x: 0
+});
